@@ -1,0 +1,52 @@
+{
+  "tasks": [
+    {
+      "general_text": "А теперь повторим известные алгоритмы. ",
+      "variations_of_task": [
+        {
+          "variable_task_text": "Напишите программу на R, которая выводит первые N чисел Фибоначчи. Число N задается с клавиатуры.",
+          "author_solution": "{n <- readline()\nn = as.integer(n)\nFibonacci <- as.numeric(n)\nFibonacci[1] <- Fibonacci[2] <- 1\nfor (i in 3:as.numeric(n)) Fibonacci[i] <- Fibonacci[i - 2] + Fibonacci[i - 1]\nprint(Fibonacci)}",
+          "hint_for_task": "Помни, что индексация начинается с 0",
+          "unit_tests": [
+            {
+              "input": "15",
+              "output": "1 1 2 3 5 8 13 21 34 55 89 144 233 377 610"
+            },
+            {
+              "input": "14",
+              "output": "1 1 2 3 5 8 13 21 34 55 89 144 233 377"
+            },
+            {
+              "input": "13",
+              "output": "1 1 2 3 5 8 13 21 34 55 89 144 233"
+            }
+          ]
+        },
+        {
+          "variable_task_text": "Напишите программу на R, которая выводит все простые числа до заданного с клавиатуры числа (на основе сита Эратосфена). ",
+          "author_solution": "{\nprime_numbers <- function(n) {\nif (n >= 2) {\n x = seq(2, n)\n prime_nums = c()\n for (i in seq(2, n)) {\n if (any(x == i)) {\n prime_nums = c(prime_nums, i)\n x = c(x[(x %% i) != 0], i)\n }\n }\n return(prime_nums)\n }\n else \n {\n stop(\"Input number should be at least 2.\")\n }\n }\nn <- readline()\nn = as.integer(n) \nprime_numbers(n)\n}",
+          "hint_for_task": "Помни, что число 1 не является простым",
+          "unit_tests": [
+            {
+              "input": "30",
+              "output": "2 3 5 7 11 13 17 19 23 29"
+            },
+            {
+              "input": "20",
+              "output": "2 3 5 7 11 13 17 19"
+            }
+          ]
+        }
+      ],
+      "pattern_code": "{n <- readline()}",
+      "task_score": 2
+    }
+  ],
+  "course_info": {
+    "course_name": "string",
+    "authors_id": 0,
+    "language": "R",
+    "time_limit": 5,
+    "group_with_access": ["user@example.com"]
+  }
+}

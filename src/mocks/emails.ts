@@ -1,0 +1,1 @@
+export const emails = ['test1@gmail.com', "test2@gmail.com", "test1@yandex.ru", "test2@yandex.ru"]
